@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Locadora de Veículos — Login</title>
+  <style>
+    :root { --red:#c1121f; --red-dark:#8f0e18; --white:#fff; --gray:#f7f7f7; }
+    body { margin:0; font-family:Arial; background:var(--gray); }
+    header { background:var(--red); color:var(--white); padding:16px; display:flex; justify-content:space-between; }
+    header a { color:var(--white); margin-left:12px; text-decoration:none; font-weight:bold; }
+    .container { max-width:400px; margin:40px auto; background:var(--white); border:2px solid var(--red); border-radius:12px; padding:24px; }
+    h1 { color:var(--red-dark); }
+    label { display:block; margin-top:12px; font-weight:bold; color:var(--red-dark); }
+    input { width:100%; padding:10px; border:1.5px solid var(--red); border-radius:8px; }
+    .btn { margin-top:16px; background:var(--red); color:var(--white); border:none; padding:12px; border-radius:8px; cursor:pointer; font-weight:bold; }
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>Locadora de Veículos</strong></div>
+    <nav>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="area-cliente.html">Área do Cliente</a>
+    </nav>
+  </header>
+  <main class="container">
+    <h1>Login</h1>
+    <form>
+      <label>E-mail</label>
+      <input type="email" required>
+      <label>Senha</label>
+      <input type="password" required>
+      <button class="btn">Entrar</button>
+    </form>
+    <hr>
+    <h1>Cadastro</h1>
+    <form>
+      <label>Nome</label>
+      <input type="text" required>
+      <label>CNH</label>
+      <input type="text" required>
+      <label>E-mail</label>
+      <input type="email" required>
+      <label>Senha</label>
+      <input type="password" required>
+      <button class="btn">Cadastrar</button>
+    </form>
+  </main>
+</body>
+</html>

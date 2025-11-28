@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Detalhes do Veículo</title>
+  <style>
+    :root { --red:#c1121f; --red-dark:#8f0e18; --white:#fff; --gray:#fafafa; }
+    body { margin:0; font-family:Arial; background:var(--gray); }
+    header { background:var(--red); color:var(--white); padding:16px; display:flex; justify-content:space-between; }
+    header a { color:var(--white); margin-left:12px; text-decoration:none; font-weight:bold; }
+    .wrap { max-width:800px; margin:24px auto; background:var(--white); border:2px solid var(--red); border-radius:12px; padding:16px; }
+    h1 { color:var(--red-dark); }
+    .meta { color:#555; }
+    .price { font-weight:bold; color:var(--red-dark); margin:12px 0; }
+    .btn { background:var(--red); color:var(--white); padding:10px; border:none; border-radius:8px; cursor:pointer; }
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>Locadora de Veículos</strong></div>
+    <nav>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="carrinho.html">Reservas</a>
+    </nav>
+  </header>
+  <main class="wrap">
+    <h1>Fiat Argo</h1>
+    <p class="meta">Compacto • Automático • Ar-condicionado</p>
+    <p class="price">R$ 120/dia</p>
+    <p>Veículo confortável, econômico e ideal para uso urbano.</p>
+    <button class="btn" onclick="location.href='carrinho.html'">Reservar</button>
+  </main>
+</body>
+</html>

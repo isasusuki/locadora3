@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Locadora de Veículos — Carrinho</title>
+  <style>
+    :root { --red:#c1121f; --red-dark:#8f0e18; --white:#fff; --gray:#fafafa; }
+    body { margin:0; font-family:Arial, sans-serif; background:var(--gray); }
+    header { background:var(--red); color:var(--white); padding:16px; display:flex; justify-content:space-between; }
+    header a { color:var(--white); margin-left:12px; text-decoration:none; font-weight:bold; }
+    .wrap { max-width:1000px; margin:24px auto; padding:0 16px; }
+    .cart { display:grid; grid-template-columns:2fr 1fr; gap:16px; }
+    .panel { background:var(--white); border:2px solid var(--red); border-radius:12px; padding:16px; box-shadow:0 8px 20px rgba(0,0,0,.06); }
+    h1 { color:var(--red-dark); margin-top:0; }
+    .item { display:grid; grid-template-columns:100px 1fr auto; gap:12px; align-items:center; padding:10px 0; border-bottom:1px solid #eee; }
+    .thumb { height:70px; background:linear-gradient(45deg,var(--red),var(--red-dark)); border-radius:8px; }
+    .title { font-weight:bold; color:var(--red-dark); }
+    .muted { color:#666; font-size:0.9rem; }
+    .btn { background:var(--red); color:var(--white); padding:10px 14px; border:none; border-radius:8px; cursor:pointer; font-weight:bold; }
+    .btn.secondary { background:var(--white); color:var(--red-dark); border:1.5px solid var(--red); }
+    .summary .row { display:flex; justify-content:space-between; margin:6px 0; }
+    .summary .total { font-weight:bold; color:var(--red-dark); }
+    @media (max-width:860px){ .cart{ grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>Locadora de Veículos</strong></div>
+    <nav>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="pagamento.html">Pagamento</a>
+      <a href="area-cliente.html">Área do Cliente</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <h1>Seu Carrinho</h1>
+    <section class="cart">
+      <!-- Lista de veículos -->
+      <div class="panel">
+        <div class="item">
+          <img class="thumb" src="fiat.jpg" alt="Fiat Argo">
+          <div>
+            <div class="title">Fiat Argo</div>
+            <div class="muted">3 diárias • R$ 120/dia</div>
+          </div>
+          <button class="btn secondary">Remover</button>
+        </div>
+        <div class="item">
+          <img class="thumb" src="chevrolet.jpg" alt="chevrolet tracker">
+
+          <div>
+            <div class="title">Chevrolet Tracker</div>
+            <div class="muted">2 diárias • R$ 180/dia</div>
+          </div>
+          <button class="btn secondary">Remover</button>
+        </div>
+        <div style="margin-top:12px;">
+          <a class="btn" href="pagamento.html">Continuar para pagamento</a>
+          <a class="btn secondary" href="catalogo.html">Adicionar mais veículos</a>
+        </div>
+      </div>
+
+      <!-- Resumo -->
+      <aside class="panel summary">
+        <h2>Resumo da Reserva</h2>
+        <div class="row"><span>Subtotal</span><span>R$ 720,00</span></div>
+        <div class="row"><span>Taxas</span><span>R$ 0,00</span></div>
+        <div class="row total"><span>Total</span><span>R$ 720,00</span></div>
+
+        <h3 style="margin-top:16px;">Cupom de desconto</h3>
+        <input type="text" placeholder="Digite seu cupom" style="width:100%; padding:10px; border-radius:8px; border:1.5px solid var(--red);"/>
+        <button class="btn" style="margin-top:8px;">Aplicar</button>
+      </aside>
+    </section>
+  </main>
+</body>
+</html>
